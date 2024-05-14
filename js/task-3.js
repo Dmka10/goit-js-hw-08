@@ -16,7 +16,6 @@ class StringBuilder{
     this.#value = str + this.#value + str;
   }
 }
-  
 
 const builder = new StringBuilder(".");
 console.log(builder.getValue()); // "."
