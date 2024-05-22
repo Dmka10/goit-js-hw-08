@@ -28,3 +28,16 @@ const images = [
 ];
 
 
+const ulElem = document.querySelector('.gallery');
+
+const ulElemItems = images.map(image => {
+  const listItem = document.createElement('li');
+  const imageElement = document.createElement('img');
+  imageElement.src = image.url;
+  imageElement.alt = image.alt;
+  imageElement.classList.add('gallery-images');
+  listItem.appendChild(imageElement);
+  return listItem;
+});
+ulElem.append(...ulElemItems);
+console.log(ulElemItems);
