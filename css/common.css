@@ -1,246 +1,27 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
-  color: #212121;
-  line-height: 1.5;
-}
-
-ul, li {
-  list-style-type: none;
-}
-
-/* ====== task 1 =======*/
-
-.categories-title {
-  margin-bottom: 10px;
-  margin-top: 5px;
-}
-
-.item {
-  border-radius: 8px;
-  padding: 16px;
-  width: 392px;
-  background: #f6f6fe;
-  border: 1px solid #808080;
-  margin-bottom: 24px;
-}
-
-.categories-item {
-  border: 1px solid #808080;
-  border-radius: 4px;
-  width: 360px;
-  height: 40px;
-  margin-bottom: 5px;
-  padding-left: 10px;
-  padding-top: 5px;
-}
-
-.categories-list {
-  width: 360px;
-  height: auto;
-  padding: 0;
-}
-
-/* ====== /task 1 =======*/
-
-/* ====== task 2 =======*/
-
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc((100% - 48px) / 3), 1fr));
+  gap: 24px;
   justify-content: center;
-  column-gap: 24px;
-  row-gap: 48px;
-  width: 1440px;
+  padding: 0 30px;
 }
 
-.gallery-images {
-  width: 360px;
-  height: 300px;
-}
-/* ====== /task 2 =======*/
-
-/* ====== task 3 =======*/
-
-#name-input {
-  width: 360px;
-  height: 40px;
-  padding-left: 16px;
+.gallery-item {
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
 
-#name-input::placeholder {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #2e2f42;
+.gallery-item:hover {
+  transform: scale(1.04);
 }
 
-.input-title {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.33;
-  letter-spacing: 0.04em;
-  color: #2e2f42;
+.gallery-link {
+  display: block;
 }
 
-#name-input:hover {
-  border: 1px solid #000;
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
-
-#name-input:active {
-  border: 1px solid #808080;
-}
-
-/* ====== task /3 =======*/
-
-/* ====== task 4 =======*/
-
-.login-form {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.input-form {
-  display: flex;
-  border: 1px solid #808080;
-  border-radius: 4px;
-  width: 360px;
-  height: 40px;
-}
-.input-form:hover {
-  border: 1px solid #000;
-}
-
-.label-form {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.form-btn {
-  border-radius: 8px;
-  padding: 8px 16px;
-  width: 86px;
-  height: 40px;
-  background: #4e75ff;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #fff;
-  border: #4e75ff;
-  margin-top: 8px;
-}
-.form-btn:hover, .form-btn:focus {
-  background-color: #6c8cff;
-}
-
-/* ====== task /4 =======*/
-
-/* ====== task 5 =======*/
-
-.change-color {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #fff;
-  border-radius: 8px;
-  padding: 8px 16px;
-  width: 148px;
-  height: 40px;
-  background: #4e75ff;
-  border: #4e75ff;
-}
-
-.widget {
-  border-radius: 8px;
-  padding: 100px 88px;
-  width: 345px;
-  height: 280px;
-  background-color: #fff;
-}
-
-.change-color:hover,
-.change-color:focus {
-  background-color: #6c8cff;
-}
-/* ====== task /5 =======*/
-
-/* ====== task 6 =======*/
-
-#controls {
-  border-radius: 8px;
-  padding: 32px;
-  min-width: 486px;
-  height: 104px;
-  margin-bottom: 16px;
-  background: #f6f6fe;
-}
-.controls-input {
-  border: 1px solid #808080;
-  border-radius: 8px;
-  padding: 8px 70px;
-  width: 150px;
-  height: 40px;
-  margin-right: 16px;
-}
-.controls-input:hover, .controls-input:focus {
-  border: solid 1px #2e2f42;
-}
-.create-btn {
-  border-radius: 8px;
-  padding: 8px 16px;
-  width: 120px;
-  height: 40px;
-  background: #4e75ff;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #fff;
-  border: transparent;
-  margin-right: 16px;
-}
-.create-btn:hover, .create-btn:focus {
-  background-color: #6c8cff;
-}
-.destroy-btn {
-  border-radius: 8px;
-  padding: 8px 16px;
-  width: 120px;
-  height: 40px;
-  background: #ff4e4e;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #fff;
-  border: transparent;
-}
-.destroy-btn:hover, .destroy-btn:focus {
-  background-color: #FF7070;
-}
-#boxes {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 44px;
-  padding: 32px;
-  min-width: 486px;
-  height: 134px;
-  background: #f6f6fe;
-}
-
-/* ====== task /6 =======*/
